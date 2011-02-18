@@ -1,1 +1,7 @@
 This is a very simple Backbone app, based heavily on the example todos app.
+
+You will need:
+- Backbone.js - http://documentcloud.github.com/backbone/
+  - The Backbone localStorage example, backbone-localstorage.js
+- Underscore - http://documentcloud.github.com/underscore/
+- json2.js - https://github.com/douglascrockford/JSON-js
