@@ -4,6 +4,7 @@ Todo:
 - add swipe to delete
 - remove dependencies and minify (right now loading is slow because of all the external JS)
 - try using Zepto (which has swipe support) instead of jQuery (currently raises an exception with a straight swap)
+  - closed, but maybe related: https://github.com/documentcloud/backbone/issues/55
 
 You will need:
 - Backbone.js - http://documentcloud.github.com/backbone/
