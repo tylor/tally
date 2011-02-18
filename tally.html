@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tally</title>
+    <script src="json2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="backbone.js"></script>
+    <script src="backbone-localstorage.js"></script>
+    <script src="tally.js"></script>
+    <style>
+      body { font-size: 1.5em; margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; }
+      #tallyapp { width: 300px; margin: auto; padding: 0 10px; }
+      h1 { font-size: 1.1em; }
+      #tallys ul { list-style: none; margin: 0; padding: 0; }
+      .tally, #create-tally { margin-top: 10px; position: relative; background: #efefef; padding: 10px; }
+      .tally-count, #create {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        background: black;
+        color: white;
+        width: 60px;
+        padding: 5px;
+        text-align: center;
+      }
+      #create { top: 11px; padding: 3px 5px 8px 5px; }
+      #create-tally input { width: 175px; font-size: 0.9em; }
+    </style>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <link rel="apple-touch-icon" href="tally.png"> 
+  </head>
+  <body>
+    <div id="tallyapp">
+      <div class="title">
+        <h1>Tally</h1>
+      </div>
+      <div class="content">
+        <div id="tallys">
+          <ul id="tally-list"></ul>
+        </div>
+        <div id="create-tally">
+          <input id="new-tally" placeholder="Start a tally" type="text" />
+          <div id="create">+</div>
+        </div>
+      </div>
+    </div>
+    <!-- Tally template -->
+    <script type="text/template" id="item-template">
+      <div class="tally">
+        <div class="tally-title"><%= title %></div>
+        <div class="tally-count"><%= count %></div>
+      </div>
+      <!--<div class="tally-destroy">Delete</div>-->
+    </script>
+  </body>
+</html>
+
