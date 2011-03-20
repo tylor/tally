@@ -1,10 +1,9 @@
-This is a very simple HTML5 web app for keeping a tally. You can use it live at: [http://tylorsherman.com/tally/tally.html](http://tylorsherman.com/tally/tally.html)
+This is a very simple HTML5 web app for keeping a tally. Create a tally, tap to add to the count, swipe to delete. You can use it live at: [http://tylorsherman.com/tally/tally.html](http://tylorsherman.com/tally/tally.html)
 
-It has some nice tweaks like swipe to delete and full application caching. It is for iOS and based heavily on the Backbone example todos app.
+It was built with iOS and for the best experience add it to your home screen. It uses local storage and application caching and is based heavily on the Backbone example todos app.
 
 ![What tally looks
 like](https://github.com/tylor/tally/raw/master/iphone.png)
-
 
 Dependencies:
 
