@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest">
   <head>
     <title>Tally</title>
     <script src="libs/JSON-js/json2.js"></script>
@@ -13,8 +13,9 @@
       #tallyapp { width: 300px; margin: auto; padding: 0 10px; }
       h1 { font-size: 1.1em; }
       #tallys ul { list-style: none; margin: 0; padding: 0; }
+      .tally-title { margin-right: 70px; }
       .tally, #create-tally { margin-top: 10px; position: relative; background: #efefef; padding: 10px; }
-      .tally-count, #create {
+      .tally-count, .tally-destroy, #create {
         position: absolute;
         right: 10px;
         top: 5px;
@@ -24,15 +25,18 @@
         padding: 5px;
         text-align: center;
       }
-      #create { top: 11px; padding: 3px 5px 8px 5px; }
+      .hide { display: none; }
+      #create, .tally-destroy { top: 11px; padding: 3px 5px 8px 5px; }
+      .tally-destroy { top: 5px; background: #f00; }
       #create-tally input { width: 175px; font-size: 0.9em; }
     </style>
+    <script>function stopBodyMove(event) { event.preventDefault(); }</script>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
     <link rel="apple-touch-icon" href="tally.png"> 
   </head>
-  <body>
+  <body ontouchmove="stopBodyMove(event);"
     <div id="tallyapp">
       <div class="title">
         <h1>Tally</h1>
@@ -52,8 +56,8 @@
       <div class="tally">
         <div class="tally-title"><%= title %></div>
         <div class="tally-count"><%= count %></div>
+        <div class="tally-destroy hide">&times;</div>
       </div>
-      <!--<div class="tally-destroy">Delete</div>-->
     </script>
   </body>
 </html>

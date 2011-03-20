@@ -56,8 +56,9 @@ $(function() {
 
     // Implement events.
     events: {
-      'click .tally': 'markTally',
-      'swipeRight .tally': 'clear'
+      'click .tally-title': 'markTally',
+      'swipeRight .tally-title': 'toggleDestroy',
+      'click .tally-destroy': 'clear'
     },
 
     // Implement initialize().
@@ -77,6 +78,10 @@ $(function() {
 
     markTally: function() {
       this.model.mark();
+    },
+
+    toggleDestroy: function() {
+      $(this.el).find('.tally-destroy').toggleClass('hide');
     },
 
     clear: function() {

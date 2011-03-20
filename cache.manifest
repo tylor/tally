@@ -1,0 +1,14 @@
+CACHE MANIFEST
+
+# Version 1
+
+# Core
+tally.html
+tally.js
+
+# Libs
+libs/JSON-js/json2.js
+libs/zepto/dist/zepto.min.js
+libs/underscore/underscore.js
+libs/backbone/backbone.js
+libs/backbone/examples/backbone-localstorage.js
