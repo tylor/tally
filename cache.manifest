@@ -9,6 +9,6 @@ tally.js
 # Libs
 libs/JSON-js/json2.js
 libs/zepto/dist/zepto.min.js
-libs/underscore/underscore.js
+libs/underscore/underscore-min.js
 libs/backbone/backbone.js
 libs/backbone/examples/backbone-localstorage.js
